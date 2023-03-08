@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "MemberFormServlet", urlPatterns = "/servlet/members/new-form")
+@WebServlet(name = "memberFormServlet", urlPatterns = "/servlet/members/new-form")
 public class MemberFormServlet extends HttpServlet {
     private MemberRepository memberRepository = MemberRepository.getInstance();
 
@@ -18,7 +18,7 @@ public class MemberFormServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
-        // ervlet으로 할시 html도 자바로 짜야하기에 힘듬
+        // servlet으로 할시 html도 자바로 짜야하기에 힘듬
         PrintWriter w=response.getWriter();
         w.write("<!DOCTYPE html>\n" +
                 "<html>\n" +
