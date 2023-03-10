@@ -15,6 +15,6 @@ public class MvcMemberFormServlet extends HttpServlet {
         String viewPath="/WEB-INF/views/new-form.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request,response);
-
+        //url 바뀌는 redirect가 아닌 데이터만 보내게 됨
     }
 }
