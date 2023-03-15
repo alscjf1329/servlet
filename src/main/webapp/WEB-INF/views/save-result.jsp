@@ -1,4 +1,3 @@
-<%@ page import="hello.servlet.domain.member.Member" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -7,9 +6,10 @@
 <body>
 성공
 <ul>
-    <li>id=<%=((Member)request.getAttribute("member")).getId()%></li>
-    <li>username=<%=((Member) request.getAttribute("member")).getUsername()%></li>
-    <li>age=<%=((Member) request.getAttribute("member")).getAge()%></li>
+<%--    id를 직접 호출하는 것이 아닌 geId()와 같음--%>
+    <li>id=${member.id}</li>
+    <li>username=${member.username}</li>
+    <li>age=${member.age}</li>
 </ul>
 <a href="/index.html">메인</a>
 </body>
